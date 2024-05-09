@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/style.css">
-        <title>Blog - Tienda de Computadoras</title>
-    </head>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Blog - Tienda de Computadoras</title>
+</head>
+
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container">
-                <a class="navbar-brand" href="index.html"><img src="assets/logoEmpresa.jpg" alt="Logo de la Empresa" style="height: 50px;"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/logoEmpresa.jpg" alt="Logo de la Empresa" style="height: 50px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                        <li class="nav-item"><a class="nav-link" href="sobre_nosotros.html">Acerca de Nosotros</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-                    </ul>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link" href="index.html">Inicio</a>
+                        <a class="nav-item nav-link" href="productos.html">Productos</a>
+                        <a class="nav-item nav-link" href="blog.html">Blog</a>
+                        <a class="nav-item nav-link" href="sobre_nosotros.html">Nosotros</a>
+                        <a class="nav-item nav-link" href="contacto.html">Contacto</a>
+                    </div>
                 </div>
                 <div class="navbar-icons">
                     <a class="nav-icon" href="login.html"><i class="fas fa-user"></i></a>
@@ -36,18 +40,30 @@
     </header>
 
     <div class="container mt-5">
-        <h2>Blog</h2>
+        <h2 style="text-align: center; margin-top: 20px; margin-bottom: 20px; color: #511573; font-size: 2.5rem;">Blog
+        </h2>
         <article class="blog-post">
             <h3>Todo sobre los cascos gamer HyperX</h3>
             <p class="post-date">Publicado el 8 de Mayo, 2024</p>
-            <p>Exploramos en profundidad las características y ventajas de los cascos gamer HyperX, ideales para jugadores que buscan la mejor experiencia de audio.</p>
-            <a href="#" class="btn btn-primary">Leer más</a>
+            <p>Exploramos en profundidad las características y ventajas de los cascos gamer HyperX, ideales para
+                jugadores que buscan la mejor experiencia de audio.</p>
+            <p>Los cascos gamer HyperX son una opción destacada para los entusiastas de los videojuegos que valoran una
+                experiencia de audio inmersiva y de alta calidad.
+                Diseñados con la tecnología más avanzada, estos cascos ofrecen varias características que los hacen
+                sobresalir en el mercado competitivo de accesorios para juegos.</p>
         </article>
         <article class="blog-post">
             <h3>¿Cómo elegir una tarjeta gráfica?</h3>
             <p class="post-date">Publicado el 15 de Mayo, 2024</p>
-            <p>Una guía detallada para ayudarte a elegir la tarjeta gráfica que mejor se adapte a tus necesidades de gaming y diseño gráfico.</p>
-            <a href="#" class="btn btn-primary">Leer más</a>
+            <p>Una guía detallada para ayudarte a elegir la tarjeta gráfica que mejor se adapte a tus necesidades de
+                gaming y diseño gráfico.</li>
+                <li>Gaming básico: Para juegos a resoluciones de 1080p con detalles medios a altos, tarjetas gráficas en
+                    el rango de $150 a $250 suelen ser suficientes.</li>
+                <li>Gaming avanzado y trabajo gráfico: Para 1440p o juegos en 1080p con detalles ultra, así como para
+                    tareas de diseño gráfico moderadas, considera tarjetas entre $250 y $500.</li>
+                <li>Alto rendimiento: Para gaming en 4K, realidad virtual de alta calidad o trabajo gráfico intensivo,
+                    necesitarás tarjetas de $500 en adelante, dependiendo de las especificaciones.</li>
+            <p></p>
         </article>
     </div>
 
@@ -56,10 +72,13 @@
             <div class="footer-content">
                 <div class="social-media">
                     <p>Síguenos en nuestras redes sociales:</p>
-                    <a href="https://facebook.com" target="_blank"><img src="assets/facebookicon.webp" alt="Facebook" /></a>
+                    <a href="https://facebook.com" target="_blank"><img src="assets/facebookicon.webp"
+                            alt="Facebook" /></a>
                     <a href="https://twitter.com" target="_blank"><img src="assets/twittericon.png" alt="Twitter" /></a>
-                    <a href="https://instagram.com" target="_blank"><img src="assets/instagramicon.png" alt="Instagram" /></a>
-                    <a href="https://linkedin.com" target="_blank"><img src="assets/linkedinicon.png" alt="LinkedIn" /></a>
+                    <a href="https://instagram.com" target="_blank"><img src="assets/instagramicon.png"
+                            alt="Instagram" /></a>
+                    <a href="https://linkedin.com" target="_blank"><img src="assets/linkedinicon.png"
+                            alt="LinkedIn" /></a>
                 </div>
                 <div class="footer-links">
                     <a href="sobre_nosotros.html">Acerca de Nosotros</a>
@@ -68,11 +87,15 @@
                 </div>
                 <div class="contact-info">
                     <p>Contacta con nosotros:</p>
-                    <p>Email: info@tusitioweb.com</p>
+                    <p>Email: info@bizcomputers.com.co.</p>
                     <p>Teléfono: +123 456 7890</p>
                 </div>
             </div>
         </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>

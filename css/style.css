@@ -1,13 +1,80 @@
-/* Configuración básica del Header */
-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    background-color: #ffffff;
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+    line-height: 1.6;
 }
 
-/* Ajustes para dispositivos móviles */
+header .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .navbar {
+    background-color: #222;
+}
+
+.navbar-brand img {
+    height: 80px;
+}
+
+.collapse.navbar-collapse {
+    flex-grow: 2;
+}
+
+.navbar-nav {
+    display: flex;           /* Alineación horizontal de los enlaces */
+    justify-content: center; /* Centra los enlaces en el contenedor */
+    width: 100%;             /* Ocupa todo el ancho disponible */
+}
+
+.navbar-nav .nav-link {
+    padding: 2px; /* Espacio alrededor de los enlaces */
+    color: #c0c0c0;   /* Color del texto */
+    font-weight: bolder; /* Fuente en negrita */
+    border-right: 2px solid #511573; /* Divisor entre elementos */
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #f8f9fa; /* Color de fondo al pasar el ratón */
+    color: #511573;            /* Cambia el color del texto en hover */
+}
+
+.navbar-nav .nav-item:last-child .nav-link {
+    border-right: none;
+}
+
+
+.navbar-icons .nav-icon {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-right: 20px;
+}
+
+.navbar-toggler {
+    order: 1;
+}
+
+@media (max-width: 768px) {
+    .navbar-nav .nav-item {
+        margin: 10px 0; /* Espaciado vertical en vistas más pequeñas */
+    }
+    
+    .navbar-nav .nav-link {
+        border-right: none; /* Remover divisores en vista móvil */
+        text-align: center; /* Centrado de texto en móviles */
+    }
+}
+
+.nav-link {
+    padding: 12px 16px;
+}
+
+.nav-icon {
+    margin: 0 10px;
+}
+
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -22,7 +89,6 @@ header {
     }
 }
 
-/* Estilos para la navegación */
 nav {
     display: flex;
     justify-content: center;
@@ -51,7 +117,6 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Estilos del footer */
 footer {
     background-color: #333;
     color: white;
@@ -60,12 +125,11 @@ footer {
     font-size: 14px;
 }
 
-/* Estilos para las tarjetas de producto */
 .card {
-    height: 100%; /* Ajusta la altura para que todas las tarjetas tengan la misma altura */
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Distribuye el espacio interior uniformemente */
+    justify-content: space-between;
 }
 
 .card:hover {
@@ -73,41 +137,39 @@ footer {
 }
 
 .card-img-top {
-    width: 100%;      /* Ocupa todo el ancho de la tarjeta */
-    height: 200px;    /* Altura fija para todas las imágenes */
-    object-fit: contain; /* Asegura que la imagen cubra completamente el espacio asignado sin distorsionarse */
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
 }
 
 .card-body {
-    flex: 1; /* Permite que el cuerpo de la tarjeta crezca para llenar el espacio disponible */
+    flex: 1;
 }
 
-.card-title, .card-text {
-    text-align: center; /* Centra el texto */
-    margin: 10px 0; /* Espaciado consistente */
+.card-title,
+.card-text {
+    text-align: center;
+    margin: 10px 0;
 }
 
-/* Botones personalizados */
-.btn-primary, .btn-success {
-    width: auto; /* Permite que los botones se ajusten al texto */
-    margin: 5px; /* Margen uniforme alrededor de los botones */
+.btn-primary,
+.btn-success {
+    width: auto;
+    margin: 5px;
 }
 
-/* Estilos para los iconos del header */
 .navbar-icons .nav-icon {
     font-size: 24px;
     color: #511573;
     margin-left: 20px;
 }
 
-/* Ajustes para los iconos de redes sociales */
 .social-media img {
     width: 24px;
     height: 24px;
     vertical-align: middle;
 }
 
-/* Ajustes del contenido del footer */
 .footer-content {
     display: flex;
     justify-content: space-around;
@@ -118,25 +180,40 @@ footer {
 .footer-links a {
     color: #fff;
     text-decoration: none;
-    margin: 5px 0;
+    margin: 5px;
 }
 
 .footer-links a:hover {
     text-decoration: underline;
 }
 
-.btn-primary, .btn-success {
-    background-color: #511573; /* Morado base */
-    border-color: #511573; /* Borde morado base */
-    color: white; /* Texto blanco para mayor legibilidad */
+.btn-primary,
+.btn-success {
+    background-color: #511573;
+    border-color: #511573;
+    color: white;
 }
 
-/* Hover para botones personalizados */
-.btn-primary:hover, .btn-success:hover {
-    background-color: #3a0d51; /* Un morado más oscuro para hover */
-    border-color: #3a0d51; /* Borde morado más oscuro para hover */
+.btn-primary:hover,
+.btn-success:hover {
+    background-color: #3a0d51;
+    border-color: #3a0d51;
 }
 
-.btn-primary, .btn-success {
+.btn-primary,
+.btn-success {
     transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.container h2 {
+    text-align: center;
+    /* Centra el texto horizontalmente */
+    margin-top: 20px;
+    /* Añade un margen superior si es necesario */
+    margin-bottom: 20px;
+    /* Añade un margen inferior para dar espacio antes de los artículos */
+    color: #511573;
+    /* Cambia el color a morado para que coincida con tu esquema, si lo deseas */
+    font-size: 2.5rem;
+    /* Ajusta el tamaño de la fuente para hacerlo más prominente */
 }

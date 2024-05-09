@@ -12,19 +12,21 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container">
-                <a class="navbar-brand" href="index.html"><img src="assets/logoEmpresa.jpg" alt="Logo de la Empresa" style="height: 50px;"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/logoEmpresa.jpg" alt="Logo de la Empresa" style="height: 50px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                        <li class="nav-item"><a class="nav-link" href="sobre_nosotros.html">Acerca de Nosotros</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-                    </ul>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link" href="index.html">Inicio</a>
+                        <a class="nav-item nav-link" href="productos.html">Productos</a>
+                        <a class="nav-item nav-link" href="blog.html">Blog</a>
+                        <a class="nav-item nav-link" href="sobre_nosotros.html">Nosotros</a>
+                        <a class="nav-item nav-link" href="contacto.html">Contacto</a>
+                    </div>
                 </div>
                 <div class="navbar-icons">
                     <a class="nav-icon" href="login.html"><i class="fas fa-user"></i></a>
@@ -34,7 +36,6 @@
             </div>
         </nav>
     </header>
-
     <div class="container mt-5">
         <h2>Registro</h2>
         <form id="register-form">
@@ -71,12 +72,15 @@
                 </div>
                 <div class="contact-info">
                     <p>Contacta con nosotros:</p>
-                    <p>Email: info@tusitioweb.com</p>
+                    <p>Email: info@bizcomputers.com.co.</p>
                     <p>Teléfono: +123 456 7890</p>
                 </div>
             </div>
         </div>
     </footer>
     <script src="js/register.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
