@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Tienda de Computadoras</title>
+    </head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="assets/logoEmpresa.jpg" alt="Logo de la Empresa" style="height: 50px;"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="sobre_nosotros.html">Acerca de Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-icons">
+                    <a class="nav-icon" href="login.html"><i class="fas fa-user"></i></a>
+                    <a class="nav-icon" href="registro.html"><i class="fas fa-user-plus"></i></a>
+                    <a class="nav-icon" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="banner">
+        <div id="mainCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#mainCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#mainCarousel" data-slide-to="1"></li>
+                <li data-target="#mainCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/banner1.png" class="d-block w-100" alt="Nuevo Producto">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5></h5>
+                        <h5>Descubre el futuro del gaming</h5>
+                        <a href="#productos" class="btn btn-primary">Compra ahora</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/banner2.png" class="d-block w-100" alt="Ofertas Especiales">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Ofertas especiales de temporada</h5>
+                        <p>Hasta un 50% de descuento en productos seleccionados</p>
+                        <a href="#productos" class="btn btn-primary">Ver ofertas</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/banner3.png" class="d-block w-100" alt="Acerca de Nosotros">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Ofertas especiales de temporada</h5>
+                        <p>Hasta un 50% de descuento en productos seleccionados</p>
+                        <a href="#productos" class="btn btn-primary">Comprar ahora</a>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#mainCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#mainCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Siguiente</span>
+            </a>
+        </div>
+    </section>
+
+    <section id="productos" class="container mt-5">
+        <h2 class="text-center mb-4">Nuestros Productos</h2>
+        <div class="row">
+            <!-- Aquí comienzan los productos -->
+            <div class="col-md-4 mb-4" data-product-id="1">
+                <div class="card">
+                    <img src="assets/Diadema-Gamer-HyperX-Cloud-Stinger-2-Core-DTS.jpg" class="card-img-top" alt="Producto 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Diadema Gamer HyperX Cloud Stinger 2 Core DTS</h5>
+                        <p class="card-text">Cascos gamer de alta calidad</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price">$250.00</span>
+                            <button class="btn btn-primary">Ver más</button>
+                            <button class="btn btn-success add-to-cart">Añadir</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copia este bloque para los otros productos, cambiando los datos del producto y el ID -->
+            <div class="col-md-4 mb-4" data-product-id="2">
+                <div class="card">
+                    <img src="assets/MICROFONO HYPERX QUADCAST S RGB.jpg" class="card-img-top" alt="Producto 2">
+                    <div class="card-body">
+                        <h5 class="card-title">MICROFONO HYPERX QUADCAST S RGB</h5>
+                        <p class="card-text">Microfono gamer de alta calidad</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price">$120.00</span>
+                            <button class="btn btn-primary">Ver más</button>
+                            <button class="btn btn-success add-to-cart">Añadir</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4" data-product-id="3">
+                <div class="card">
+                    <img src="assets/Mouse Gamer Logitech G502 X.jpg" class="card-img-top" alt="Producto 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Mouse Gamer Logitech G502 X</h5>
+                        <p class="card-text">Mouse gamer de alta calidad</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price">$100.00</span>
+                            <button class="btn btn-primary">Ver más</button>
+                            <button class="btn btn-success add-to-cart">Añadir</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4" data-product-id="4">
+                <div class="card">
+                    <img src="assets/Tarjeta INNO3D GEFORCE RTX 4080 SUPER ICHILL X3 16G RGB.jpg" class="card-img-top" alt="Producto 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Tarjeta INNO3D GEFORCE RTX 4080 SUPER X3 16G</h5>
+                        <p class="card-text">Tarjeta grafica gamer</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price">$1200.00</span>
+                            <button class="btn btn-primary">Ver más</button>
+                            <button class="btn btn-success add-to-cart">Añadir</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4" data-product-id="5">
+                <div class="card">
+                    <img src="assets/Tarjeta-XFX-SPEEDSTER-SWFT-210-AMD-Radeon-RX-7600-XT.jpg" class="card-img-top" alt="Producto 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Tarjeta SPEEDSTER 210 AMD Radeon RX 7600 XT</h5>
+                        <p class="card-text">Tarjeta grafica gamer</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price">$1000.00</span>
+                            <button class="btn btn-primary">Ver más</button>
+                            <button class="btn btn-success add-to-cart">Añadir</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4" data-product-id="6">
+                <div class="card">
+                    <img src="assets/Teclado Logitech G PRO X TKL LIGHTSPEED Black-5.jpg" class="card-img-top" alt="Producto 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Teclado Logitech G PRO LIGHTSPEED Black-5</h5>
+                        <p class="card-text">Teclado gamer de alta calidad</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price">$250.00</span>
+                            <button class="btn btn-primary">Ver más</button>
+                            <button class="btn btn-success add-to-cart">Añadiro</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-media">
+                    <p>Síguenos en nuestras redes sociales:</p>
+                    <a href="https://facebook.com" target="_blank"><img src="assets/facebookicon.webp" alt="Facebook" /></a>
+                    <a href="https://twitter.com" target="_blank"><img src="assets/twittericon.png" alt="Twitter" /></a>
+                    <a href="https://instagram.com" target="_blank"><img src="assets/instagramicon.png" alt="Instagram" /></a>
+                    <a href="https://linkedin.com" target="_blank"><img src="assets/linkedinicon.png" alt="LinkedIn" /></a>
+                </div>
+                <div class="footer-links">
+                    <a href="sobre_nosotros.html">Acerca de Nosotros</a>
+                    <a href="politica_privacidad.html">Política de Privacidad</a>
+                    <a href="terminos_condiciones.html">Términos y Condiciones</a>
+                </div>
+                <div class="contact-info">
+                    <p>Contacta con nosotros:</p>
+                    <p>Email: info@tusitioweb.com</p>
+                    <p>Teléfono: +123 456 7890</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js" defer></script>
+    <script src="js/login.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+/* Configuración básica del Header */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-top: 10px;
+    }
+}
+
+/* Estilos para la navegación */
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    padding: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #c0c0c0;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Estilos del footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+/* Estilos para las tarjetas de producto */
+.card {
+    height: 100%; /* Ajusta la altura para que todas las tarjetas tengan la misma altura */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuye el espacio interior uniformemente */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    width: 100%;      /* Ocupa todo el ancho de la tarjeta */
+    height: 200px;    /* Altura fija para todas las imágenes */
+    object-fit: contain; /* Asegura que la imagen cubra completamente el espacio asignado sin distorsionarse */
+}
+
+.card-body {
+    flex: 1; /* Permite que el cuerpo de la tarjeta crezca para llenar el espacio disponible */
+}
+
+.card-title, .card-text {
+    text-align: center; /* Centra el texto */
+    margin: 10px 0; /* Espaciado consistente */
+}
+
+/* Botones personalizados */
+.btn-primary, .btn-success {
+    width: auto; /* Permite que los botones se ajusten al texto */
+    margin: 5px; /* Margen uniforme alrededor de los botones */
+}
+
+/* Estilos para los iconos del header */
+.navbar-icons .nav-icon {
+    font-size: 24px;
+    color: #511573;
+    margin-left: 20px;
+}
+
+/* Ajustes para los iconos de redes sociales */
+.social-media img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+/* Ajustes del contenido del footer */
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.btn-primary, .btn-success {
+    background-color: #511573; /* Morado base */
+    border-color: #511573; /* Borde morado base */
+    color: white; /* Texto blanco para mayor legibilidad */
+}
+
+/* Hover para botones personalizados */
+.btn-primary:hover, .btn-success:hover {
+    background-color: #3a0d51; /* Un morado más oscuro para hover */
+    border-color: #3a0d51; /* Borde morado más oscuro para hover */
+}
+
+.btn-primary, .btn-success {
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
