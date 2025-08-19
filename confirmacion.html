@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Confirmacion - Tienda de Computadoras</title>
+    <title>Confirmación de Pedido - BIZ COMPUTERS</title>
 </head>
 
 <body>
@@ -39,11 +39,71 @@
         </nav>
     </header>
 
-    <div class="container mt-5">
-        <h1>Confirmación de Pedido</h1>
-        <p>Gracias por tu compra. Tu pedido ha sido procesado correctamente.</p>
-        <p>Un resumen de tu pedido ha sido enviado a tu correo electrónico.</p>
-        <a href="index.html" class="btn btn-primary">Volver al Inicio</a>
+    <div class="container mt-5" style="margin-top: 120px !important;">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card border-success">
+                    <div class="card-body text-center p-5">
+                        <div class="success-animation mb-4">
+                            <i class="fas fa-check-circle text-success" style="font-size: 4rem;"></i>
+                        </div>
+                        
+                        <h1 class="text-success mb-3">¡Pedido Confirmado!</h1>
+                        <p class="lead mb-4">Gracias por tu compra. Tu pedido ha sido procesado exitosamente.</p>
+                        
+                        <div class="alert alert-info">
+                            <i class="fas fa-envelope"></i>
+                            <strong>Un resumen de tu pedido ha sido enviado a tu correo electrónico.</strong>
+                        </div>
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-4">
+                                <div class="text-center">
+                                    <i class="fas fa-shipping-fast fa-2x text-primary mb-2"></i>
+                                    <h6>Envío</h6>
+                                    <small class="text-muted">Tu pedido será enviado en 2-3 días hábiles</small>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="text-center">
+                                    <i class="fas fa-credit-card fa-2x text-success mb-2"></i>
+                                    <h6>Pago</h6>
+                                    <small class="text-muted">Pago procesado exitosamente</small>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="text-center">
+                                    <i class="fas fa-shield-alt fa-2x text-warning mb-2"></i>
+                                    <h6>Garantía</h6>
+                                    <small class="text-muted">30 días de garantía en todos los productos</small>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-5">
+                            <a href="index.html" class="btn btn-primary btn-lg mr-3">
+                                <i class="fas fa-home"></i> Volver al Inicio
+                            </a>
+                            <a href="productos.html" class="btn btn-outline-primary btn-lg">
+                                <i class="fas fa-shopping-bag"></i> Seguir Comprando
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <h5><i class="fas fa-info-circle text-info"></i> Información Importante</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-clock text-primary"></i> <strong>Tiempo de envío:</strong> 2-3 días hábiles</li>
+                            <li><i class="fas fa-phone text-success"></i> <strong>Soporte:</strong> +123 456 7890</li>
+                            <li><i class="fas fa-envelope text-info"></i> <strong>Email:</strong> info@bizcomputers.com.co</li>
+                            <li><i class="fas fa-map-marker-alt text-warning"></i> <strong>Dirección:</strong> Calle Principal #123, Ciudad</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <footer>
@@ -72,9 +132,32 @@
             </div>
         </div>
     </footer>
+    
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <style>
+        .success-animation {
+            animation: bounce 1s ease;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+        
+        .card.border-success {
+            border-width: 3px !important;
+        }
+    </style>
 </body>
 
 </html>

@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Checkout - Tienda de Computadoras</title>
+    <title>Checkout - BIZ COMPUTERS</title>
 </head>
 
 <body>
@@ -17,81 +17,189 @@
                 <a class="navbar-brand" href="index.html">
                     <img src="assets/logoEmpresa.jpg" alt="Logo de la Empresa" style="height: 50px;">
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-item nav-link" href="index.html">Inicio</a>
-                        <a class="nav-item nav-link" href="productos.html">Productos</a>
-                        <a class="nav-item nav-link" href="blog.html">Blog</a>
-                        <a class="nav-item nav-link" href="sobre_nosotros.html">Nosotros</a>
-                        <a class="nav-item nav-link" href="contacto.html">Contacto</a>
-                    </div>
-                </div>
-                <div class="navbar-icons">
-                    <a class="nav-icon" href="login.html"><i class="fas fa-user"></i></a>
-                    <a class="nav-icon" href="registro.html"><i class="fas fa-user-plus"></i></a>
-                    <a class="nav-icon" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="productos.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cart.html">Carrito</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
     </header>
 
-    <div class="container mt-5">
-        <h2>Proceso de Pago</h2>
-        <form id="payment-form">
-            <div class="form-group">
-                <label for="cardNumber">Número de Tarjeta</label>
-                <input type="text" class="form-control" id="cardNumber" required>
-            </div>
-            <div class="form-group">
-                <label for="cardName">Nombre en la Tarjeta</label>
-                <input type="text" class="form-control" id="cardName" required>
-            </div>
-            <div class="form-group">
-                <label for="expiryDate">Fecha de Vencimiento</label>
-                <input type="month" class="form-control" id="expiryDate" required>
-            </div>
-            <div class="form-group">
-                <label for="cvv">CVV</label>
-                <input type="number" class="form-control" id="cvv" required>
-            </div>
-            <button type="submit" class="btn btn-primary">Realizar Pago</button>
-        </form>
-    </div>
-
-    <footer>
+    <div class="checkout-container">
         <div class="container">
-            <div class="footer-content">
-                <div class="social-media">
-                    <p>Síguenos en nuestras redes sociales:</p>
-                    <a href="https://facebook.com" target="_blank"><img src="assets/facebookicon.webp"
-                            alt="Facebook" /></a>
-                    <a href="https://twitter.com" target="_blank"><img src="assets/twittericon.png" alt="Twitter" /></a>
-                    <a href="https://instagram.com" target="_blank"><img src="assets/instagramicon.png"
-                            alt="Instagram" /></a>
-                    <a href="https://linkedin.com" target="_blank"><img src="assets/linkedinicon.png"
-                            alt="LinkedIn" /></a>
+            <!-- Título principal -->
+            <div class="checkout-title">
+                <h1><i class="fas fa-credit-card"></i> Finalizar Compra</h1>
+                <p>Completa tu información de pago para finalizar tu pedido</p>
+            </div>
+
+            <div class="row">
+                <!-- Columna izquierda - Información del pedido -->
+                <div class="col-lg-8">
+                    <!-- Resumen del pedido -->
+                    <div class="order-summary">
+                        <h3><i class="fas fa-shopping-cart"></i> Resumen del Pedido</h3>
+                        <div id="order-items">
+                            <!-- Los items se cargarán dinámicamente -->
+                        </div>
+                        <div class="order-total">
+                            <div class="total-row">
+                                <span>Subtotal:</span>
+                                <span id="subtotal">$0</span>
+                            </div>
+                            <div class="total-row">
+                                <span>Envío:</span>
+                                <span id="shipping">$0</span>
+                            </div>
+                            <div class="total-row">
+                                <span>IVA (19%):</span>
+                                <span id="tax">$0</span>
+                            </div>
+                            <div class="total-row final">
+                                <span>Total:</span>
+                                <span class="amount" id="total">$0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Formulario de pago -->
+                    <div class="payment-form">
+                        <h3><i class="fas fa-credit-card"></i> Información de Pago</h3>
+                        <form id="payment-form">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="cardNumber">Número de Tarjeta</label>
+                                        <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="cardholderName">Nombre del Titular</label>
+                                        <input type="text" id="cardholderName" placeholder="Juan Pérez" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="expiryMonth">Mes</label>
+                                        <select id="expiryMonth" class="form-control" required>
+                                            <option value="">Mes</option>
+                                            <option value="01">01</option>
+                                            <option value="02">02</option>
+                                            <option value="03">03</option>
+                                            <option value="04">04</option>
+                                            <option value="05">05</option>
+                                            <option value="06">06</option>
+                                            <option value="07">07</option>
+                                            <option value="08">08</option>
+                                            <option value="09">09</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="expiryYear">Año</label>
+                                        <select id="expiryYear" class="form-control" required>
+                                            <option value="">Año</option>
+                                            <option value="2024">2024</option>
+                                            <option value="2025">2025</option>
+                                            <option value="2026">2026</option>
+                                            <option value="2027">2027</option>
+                                            <option value="2028">2028</option>
+                                            <option value="2029">2029</option>
+                                            <option value="2030">2030</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="cvv">CVV</label>
+                                        <input type="text" id="cvv" placeholder="123" maxlength="4" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                <div class="footer-links">
-                    <a href="sobre_nosotros.html">Acerca de Nosotros</a>
-                    <a href="politica_privacidad.html">Política de Privacidad</a>
-                    <a href="terminos_condiciones.html">Términos y Condiciones</a>
-                </div>
-                <div class="contact-info">
-                    <p>Contacta con nosotros:</p>
-                    <p>Email: info@bizcomputers.com.co.</p>
-                    <p>Teléfono: +123 456 7890</p>
+
+                <!-- Columna derecha - Información adicional -->
+                <div class="col-lg-4">
+                    <!-- Información del pedido -->
+                    <div class="info-card">
+                        <h3><i class="fas fa-info-circle"></i> Información del Pedido</h3>
+                        <ul class="info-list">
+                            <li>
+                                <i class="fas fa-truck text-success"></i>
+                                <span>Envío gratuito en pedidos superiores a $500,000</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-shield-alt text-warning"></i>
+                                <span>Garantía de 30 días en todos los productos</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-lock text-primary"></i>
+                                <span>Pago seguro con tarjeta de crédito/débito</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Métodos de pago -->
+                    <div class="info-card">
+                        <h3><i class="fas fa-credit-card text-success"></i> Métodos de Pago</h3>
+                        <div class="payment-methods">
+                            <div class="payment-method">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa">
+                                <span>VISA</span>
+                            </div>
+                            <div class="payment-method">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard">
+                                <span>Mastercard</span>
+                            </div>
+                            <div class="payment-method">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/American_Express_logo_%282018%29.svg" alt="American Express">
+                                <span>Amex</span>
+                            </div>
+                            <div class="payment-method">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/PayPal_logo.svg" alt="PayPal">
+                                <span>PayPal</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Botón de proceder al pago -->
+                    <div class="text-center">
+                        <button type="button" class="btn-proceed" onclick="procesarPago()">
+                            <i class="fas fa-lock"></i>
+                            <span>PROCEDER AL PAGO</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-    </footer>
-    <script src="js/payment.js"></script>
+    </div>
+
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/payment.js"></script>
 </body>
 
 </html>

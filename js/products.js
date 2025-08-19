@@ -230,6 +230,13 @@ function agregarAlCarrito(productoId) {
     const producto = obtenerProductoPorId(productoId);
     if (!producto) {
         console.error('Producto no encontrado');
+        mostrarNotificacion('Producto no encontrado', 'error');
+        return;
+    }
+
+    // Verificar stock
+    if (producto.stock <= 0) {
+        mostrarNotificacion('Producto agotado', 'error');
         return;
     }
 
@@ -240,6 +247,11 @@ function agregarAlCarrito(productoId) {
     const productoEnCarrito = carrito.find(item => item.id === productoId);
     
     if (productoEnCarrito) {
+        // Verificar si hay suficiente stock
+        if (productoEnCarrito.cantidad >= producto.stock) {
+            mostrarNotificacion(`No hay más stock disponible. Máximo: ${producto.stock} unidades`, 'warning');
+            return;
+        }
         productoEnCarrito.cantidad += 1;
     } else {
         carrito.push({
@@ -247,7 +259,8 @@ function agregarAlCarrito(productoId) {
             nombre: producto.nombre,
             precio: producto.precio,
             imagen: producto.imagen,
-            cantidad: 1
+            cantidad: 1,
+            stock: producto.stock
         });
     }
 
@@ -255,36 +268,116 @@ function agregarAlCarrito(productoId) {
     localStorage.setItem('carrito', JSON.stringify(carrito));
     
     // Mostrar notificación
-    mostrarNotificacion(`${producto.nombre} agregado al carrito`);
+    mostrarNotificacion(`${producto.nombre} agregado al carrito`, 'success');
+    
+    // Actualizar contador del carrito en el header
+    actualizarContadorCarrito();
+    
+    // Efecto visual en el botón
+    const boton = event.target;
+    if (boton) {
+        boton.innerHTML = '<i class="fas fa-check"></i> Agregado';
+        boton.classList.add('btn-success');
+        boton.classList.remove('btn-primary');
+        
+        setTimeout(() => {
+            boton.innerHTML = '<i class="fas fa-cart-plus"></i> Agregar al Carrito';
+            boton.classList.remove('btn-success');
+            boton.classList.add('btn-primary');
+        }, 2000);
+    }
 }
 
 /**
- * Muestra una notificación
- * @param {string} mensaje - Mensaje a mostrar
+ * Actualiza el contador del carrito en el header
  */
-function mostrarNotificacion(mensaje) {
+function actualizarContadorCarrito() {
+    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    const totalItems = carrito.reduce((sum, item) => sum + item.cantidad, 0);
+    
+    // Buscar o crear el contador del carrito
+    let cartCounter = document.querySelector('.cart-counter');
+    if (!cartCounter) {
+        const cartIcon = document.querySelector('a[href="cart.html"]');
+        if (cartIcon) {
+            cartCounter = document.createElement('span');
+            cartCounter.className = 'cart-counter';
+            cartCounter.style.cssText = `
+                position: absolute;
+                top: -8px;
+                right: -8px;
+                background: #dc3545;
+                color: white;
+                border-radius: 50%;
+                width: 20px;
+                height: 20px;
+                font-size: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+            `;
+            cartIcon.style.position = 'relative';
+            cartIcon.appendChild(cartCounter);
+        }
+    }
+    
+    if (cartCounter) {
+        cartCounter.textContent = totalItems;
+        cartCounter.style.display = totalItems > 0 ? 'flex' : 'none';
+    }
+}
+
+/**
+ * Muestra una notificación mejorada
+ * @param {string} mensaje - Mensaje a mostrar
+ * @param {string} tipo - Tipo de notificación (success, error, warning, info)
+ */
+function mostrarNotificacion(mensaje, tipo = 'success') {
+    // Remover notificaciones existentes
+    const notificacionesExistentes = document.querySelectorAll('.notificacion-producto');
+    notificacionesExistentes.forEach(notif => notif.remove());
+    
     // Crear elemento de notificación
     const notificacion = document.createElement('div');
-    notificacion.className = 'notificacion';
-    notificacion.textContent = mensaje;
+    notificacion.className = `notificacion-producto alert alert-${tipo === 'error' ? 'danger' : tipo} alert-dismissible fade show`;
     notificacion.style.cssText = `
         position: fixed;
         top: 20px;
         right: 20px;
-        background: #28a745;
-        color: white;
-        padding: 15px 20px;
-        border-radius: 5px;
-        z-index: 1000;
-        animation: slideIn 0.3s ease;
+        z-index: 9999;
+        min-width: 300px;
+        max-width: 400px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        border: none;
+        border-radius: 8px;
+    `;
+    
+    const iconos = {
+        success: 'fas fa-check-circle',
+        error: 'fas fa-exclamation-circle',
+        warning: 'fas fa-exclamation-triangle',
+        info: 'fas fa-info-circle'
+    };
+    
+    notificacion.innerHTML = `
+        <div class="d-flex align-items-center">
+            <i class="${iconos[tipo]} mr-2"></i>
+            <span>${mensaje}</span>
+        </div>
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
     `;
 
     document.body.appendChild(notificacion);
 
-    // Remover después de 3 segundos
+    // Remover después de 4 segundos
     setTimeout(() => {
-        notificacion.remove();
-    }, 3000);
+        if (notificacion.parentNode) {
+            notificacion.remove();
+        }
+    }, 4000);
 }
 
 /**
@@ -326,6 +419,9 @@ document.addEventListener('DOMContentLoaded', function() {
         renderizarTodosLosProductos();
     }
     
+    // Actualizar contador del carrito al cargar la página
+    actualizarContadorCarrito();
+    
     // Agregar estilos CSS para la notificación
     const estilos = document.createElement('style');
     estilos.textContent = `
@@ -337,6 +433,22 @@ document.addEventListener('DOMContentLoaded', function() {
             to {
                 transform: translateX(0);
                 opacity: 1;
+            }
+        }
+        
+        .cart-counter {
+            animation: bounce 0.6s ease;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
             }
         }
     `;

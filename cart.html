@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Carrito - Tienda de Computadoras</title>
+    <title>Carrito de Compras - BIZ COMPUTERS</title>
 </head>
 
 <body>
@@ -17,79 +17,110 @@
                 <a class="navbar-brand" href="index.html">
                     <img src="assets/logoEmpresa.jpg" alt="Logo de la Empresa" style="height: 50px;">
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-item nav-link" href="index.html">Inicio</a>
-                        <a class="nav-item nav-link" href="productos.html">Productos</a>
-                        <a class="nav-item nav-link" href="blog.html">Blog</a>
-                        <a class="nav-item nav-link" href="sobre_nosotros.html">Nosotros</a>
-                        <a class="nav-item nav-link" href="contacto.html">Contacto</a>
-                    </div>
-                </div>
-                <div class="navbar-icons">
-                    <a class="nav-icon" href="login.html"><i class="fas fa-user"></i></a>
-                    <a class="nav-icon" href="registro.html"><i class="fas fa-user-plus"></i></a>
-                    <a class="nav-icon" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="productos.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="cart.html">Carrito</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
     </header>
 
-    <div class="container mt-5">
-        <h2>Carrito de Compras</h2>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Producto</th>
-                    <th>Precio</th>
-                    <th>Cantidad</th>
-                    <th>Subtotal</th>
-                    <th>Acción</th>
-                </tr>
-            </thead>
-            <tbody id="cart-items">
-                <!-- Los elementos del carrito se agregarán aquí dinámicamente -->
-            </tbody>
-        </table>
-        <div class="text-right">
-            <button class="btn btn-primary" id="proceed-to-checkout">Proceder al Pago</button>
-        </div>
-    </div>
-
-    <footer>
+    <div class="checkout-container">
         <div class="container">
-            <div class="footer-content">
-                <div class="social-media">
-                    <p>Síguenos en nuestras redes sociales:</p>
-                    <a href="https://facebook.com" target="_blank"><img src="assets/facebookicon.webp"
-                            alt="Facebook" /></a>
-                    <a href="https://twitter.com" target="_blank"><img src="assets/twittericon.png" alt="Twitter" /></a>
-                    <a href="https://instagram.com" target="_blank"><img src="assets/instagramicon.png"
-                            alt="Instagram" /></a>
-                    <a href="https://linkedin.com" target="_blank"><img src="assets/linkedinicon.png"
-                            alt="LinkedIn" /></a>
+            <!-- Título principal -->
+            <div class="checkout-title">
+                <h1><i class="fas fa-shopping-cart"></i> Tu Carrito de Compras</h1>
+                <p>Revisa y gestiona los productos en tu carrito</p>
+            </div>
+
+            <div class="row">
+                <!-- Columna izquierda - Items del carrito -->
+                <div class="col-lg-8">
+                    <div class="order-summary">
+                        <h3><i class="fas fa-shopping-bag"></i> Productos en el Carrito</h3>
+                        <div id="cart-items">
+                            <!-- Los items se cargarán dinámicamente -->
+                        </div>
+                    </div>
                 </div>
-                <div class="footer-links">
-                    <a href="sobre_nosotros.html">Acerca de Nosotros</a>
-                    <a href="politica_privacidad.html">Política de Privacidad</a>
-                    <a href="terminos_condiciones.html">Términos y Condiciones</a>
-                </div>
-                <div class="contact-info">
-                    <p>Contacta con nosotros:</p>
-                    <p>Email: info@bizcomputers.com.co.</p>
-                    <p>Teléfono: +123 456 7890</p>
+
+                <!-- Columna derecha - Resumen y acciones -->
+                <div class="col-lg-4">
+                    <!-- Resumen del pedido -->
+                    <div class="order-summary">
+                        <h3><i class="fas fa-calculator"></i> Resumen del Pedido</h3>
+                        <div class="order-total">
+                            <div class="total-row">
+                                <span>Subtotal:</span>
+                                <span id="cart-subtotal">$0</span>
+                            </div>
+                            <div class="total-row">
+                                <span>Envío:</span>
+                                <span id="cart-shipping">$0</span>
+                            </div>
+                            <div class="total-row">
+                                <span>IVA (19%):</span>
+                                <span id="cart-tax">$0</span>
+                            </div>
+                            <div class="total-row final">
+                                <span>Total:</span>
+                                <span class="amount" id="cart-total">$0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Información del pedido -->
+                    <div class="info-card">
+                        <h3><i class="fas fa-info-circle"></i> Información del Pedido</h3>
+                        <ul class="info-list">
+                            <li>
+                                <i class="fas fa-truck text-success"></i>
+                                <span>Envío gratuito en pedidos superiores a $500,000</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-shield-alt text-warning"></i>
+                                <span>Garantía de 30 días en todos los productos</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-undo text-info"></i>
+                                <span>Devolución gratuita hasta 30 días</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Botones de acción -->
+                    <div class="text-center">
+                        <a href="productos.html" class="btn-proceed" style="background: linear-gradient(135deg, #6c757d, #495057); margin-bottom: 1rem;">
+                            <i class="fas fa-arrow-left"></i>
+                            <span>SEGUIR COMPRANDO</span>
+                        </a>
+                        <button type="button" class="btn-proceed" onclick="procederAlPago()" id="checkout-btn" disabled>
+                            <i class="fas fa-credit-card"></i>
+                            <span>PROCEDER AL PAGO</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-    </footer>
-    <script src="js/cart.js"></script>
+    </div>
+
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/cart.js"></script>
 </body>
 
 </html>
