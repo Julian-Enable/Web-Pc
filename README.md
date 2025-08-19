@@ -241,4 +241,4 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más det
 
 **Desarrollado con ❤️ para BIZ COMPUTERS**
 
-*Última actualización: Diciembre 2024*
+*Última actualización: Agosto 2025*
