@@ -7,95 +7,280 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Blog - Tienda de Computadoras</title>
+    <title>BIZ COMPUTERS - Blog Gaming</title>
+    <meta name="description" content="Descubre las últimas noticias, guías y consejos sobre gaming, hardware y tecnología. Mantente actualizado con BIZ COMPUTERS.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="blog-page">
+    <!-- Header -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
                 <a class="navbar-brand" href="index.html">
-                    <img src="assets/logoEmpresa.jpg" alt="Logo de la Empresa" style="height: 50px;">
+                    <img src="assets/logoEmpresa.jpg" alt="BIZ COMPUTERS" style="height: 60px;">
+                    <span class="brand-text">BIZ COMPUTERS</span>
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-item nav-link" href="index.html">Inicio</a>
-                        <a class="nav-item nav-link" href="productos.html">Productos</a>
-                        <a class="nav-item nav-link" href="blog.html">Blog</a>
-                        <a class="nav-item nav-link" href="sobre_nosotros.html">Nosotros</a>
-                        <a class="nav-item nav-link" href="contacto.html">Contacto</a>
-                    </div>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="productos.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobre_nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="navbar-icons">
-                    <a class="nav-icon" href="login.html"><i class="fas fa-user"></i></a>
-                    <a class="nav-icon" href="registro.html"><i class="fas fa-user-plus"></i></a>
-                    <a class="nav-icon" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                    <div class="theme-toggle" onclick="toggleTheme()">
+                        <div class="toggle-slider"></div>
+                    </div>
+                    <a class="nav-icon" href="login.html" title="Iniciar Sesión">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <a class="nav-icon" href="registro.html" title="Registrarse">
+                        <i class="fas fa-user-plus"></i>
+                    </a>
+                    <a class="nav-icon" href="cart.html" title="Carrito">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
                 </div>
             </div>
         </nav>
     </header>
 
-    <div class="container mt-5">
-        <h2 style="text-align: center; margin-top: 20px; margin-bottom: 20px; color: #511573; font-size: 2.5rem;">Blog
-        </h2>
-        <article class="blog-post">
-            <h3>Todo sobre los cascos gamer HyperX</h3>
-            <p class="post-date">Publicado el 8 de Mayo, 2024</p>
-            <p>Exploramos en profundidad las características y ventajas de los cascos gamer HyperX, ideales para
-                jugadores que buscan la mejor experiencia de audio.</p>
-            <p>Los cascos gamer HyperX son una opción destacada para los entusiastas de los videojuegos que valoran una
-                experiencia de audio inmersiva y de alta calidad.
-                Diseñados con la tecnología más avanzada, estos cascos ofrecen varias características que los hacen
-                sobresalir en el mercado competitivo de accesorios para juegos.</p>
-        </article>
-        <article class="blog-post">
-            <h3>¿Cómo elegir una tarjeta gráfica?</h3>
-            <p class="post-date">Publicado el 15 de Mayo, 2024</p>
-            <p>Una guía detallada para ayudarte a elegir la tarjeta gráfica que mejor se adapte a tus necesidades de
-                gaming y diseño gráfico.</li>
-                <li>Gaming básico: Para juegos a resoluciones de 1080p con detalles medios a altos, tarjetas gráficas en
-                    el rango de $150 a $250 suelen ser suficientes.</li>
-                <li>Gaming avanzado y trabajo gráfico: Para 1440p o juegos en 1080p con detalles ultra, así como para
-                    tareas de diseño gráfico moderadas, considera tarjetas entre $250 y $500.</li>
-                <li>Alto rendimiento: Para gaming en 4K, realidad virtual de alta calidad o trabajo gráfico intensivo,
-                    necesitarás tarjetas de $500 en adelante, dependiendo de las especificaciones.</li>
-            <p></p>
-        </article>
-    </div>
+    <!-- Hero Section -->
+    <section class="blog-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="blog-title">Blog Gaming</h1>
+                    <p class="blog-subtitle">Descubre las últimas noticias, guías y consejos sobre gaming y tecnología</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Blog Content -->
+    <section class="blog-content">
+        <div class="container">
+            <div class="row">
+                <!-- Main Content -->
+                <div class="col-lg-8">
+                    <!-- Featured Post -->
+                    <article class="blog-post featured">
+                        <div class="post-image">
+                            <img src="assets/Diadema-Gamer-HyperX-Cloud-Stinger-2-Core-DTS.jpg" alt="HyperX Headset" class="img-fluid">
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="post-category">Audio Gaming</span>
+                                <span class="post-date">8 de Mayo, 2024</span>
+                            </div>
+                            <h2 class="post-title">Todo sobre los cascos gamer HyperX</h2>
+                            <p class="post-excerpt">
+                                Exploramos en profundidad las características y ventajas de los cascos gamer HyperX, 
+                                ideales para jugadores que buscan la mejor experiencia de audio.
+                            </p>
+                            <p class="post-text">
+                                Los cascos gamer HyperX son una opción destacada para los entusiastas de los videojuegos 
+                                que valoran una experiencia de audio inmersiva y de alta calidad. Diseñados con la 
+                                tecnología más avanzada, estos cascos ofrecen varias características que los hacen 
+                                sobresalir en el mercado competitivo de accesorios para juegos.
+                            </p>
+                            <div class="post-features">
+                                <h4>Características Principales:</h4>
+                                <ul>
+                                    <li><strong>Audio Surround 7.1:</strong> Experiencia inmersiva completa</li>
+                                    <li><strong>Micrófono con Cancelación de Ruido:</strong> Comunicación cristalina</li>
+                                    <li><strong>Comodidad Extendida:</strong> Almohadillas de memoria viscoelástica</li>
+                                    <li><strong>Compatibilidad Universal:</strong> PC, PS4, Xbox One, Nintendo Switch</li>
+                                </ul>
+                            </div>
+                            <a href="#" class="btn btn-primary read-more">Leer más</a>
+                        </div>
+                    </article>
+
+                    <!-- Second Post -->
+                    <article class="blog-post">
+                        <div class="post-image">
+                            <img src="assets/Tarjeta INNO3D GEFORCE RTX 4080 SUPER ICHILL X3 16G RGB.jpg" alt="RTX 4080" class="img-fluid">
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="post-category">Hardware</span>
+                                <span class="post-date">15 de Mayo, 2024</span>
+                            </div>
+                            <h2 class="post-title">¿Cómo elegir una tarjeta gráfica?</h2>
+                            <p class="post-excerpt">
+                                Una guía detallada para ayudarte a elegir la tarjeta gráfica que mejor se adapte 
+                                a tus necesidades de gaming y diseño gráfico.
+                            </p>
+                            <div class="post-features">
+                                <h4>Guía de Selección por Presupuesto:</h4>
+                                <div class="budget-guide">
+                                    <div class="budget-tier">
+                                        <h5>🎮 Gaming Básico</h5>
+                                        <p>Para juegos a resoluciones de 1080p con detalles medios a altos</p>
+                                        <span class="price-range">$150 - $250</span>
+                                        <ul>
+                                            <li>GTX 1660 Super</li>
+                                            <li>RX 5600 XT</li>
+                                            <li>RTX 3050</li>
+                                        </ul>
+                                    </div>
+                                    <div class="budget-tier">
+                                        <h5>⚡ Gaming Avanzado</h5>
+                                        <p>Para 1440p o juegos en 1080p con detalles ultra</p>
+                                        <span class="price-range">$250 - $500</span>
+                                        <ul>
+                                            <li>RTX 3060 Ti</li>
+                                            <li>RX 6700 XT</li>
+                                            <li>RTX 3070</li>
+                                        </ul>
+                                    </div>
+                                    <div class="budget-tier">
+                                        <h5>🚀 Alto Rendimiento</h5>
+                                        <p>Para gaming en 4K, VR o trabajo gráfico intensivo</p>
+                                        <span class="price-range">$500+</span>
+                                        <ul>
+                                            <li>RTX 4080</li>
+                                            <li>RX 7900 XTX</li>
+                                            <li>RTX 4090</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary read-more">Leer más</a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <aside class="blog-sidebar">
+                        <!-- Search -->
+                        <div class="sidebar-widget">
+                            <h4>Buscar</h4>
+                            <div class="search-box">
+                                <input type="text" placeholder="Buscar artículos..." class="form-control">
+                                <button class="btn btn-primary"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Categories -->
+                        <div class="sidebar-widget">
+                            <h4>Categorías</h4>
+                            <ul class="category-list">
+                                <li><a href="#">Audio Gaming <span>(5)</span></a></li>
+                                <li><a href="#">Hardware <span>(12)</span></a></li>
+                                <li><a href="#">Gaming <span>(8)</span></a></li>
+                                <li><a href="#">Reviews <span>(15)</span></a></li>
+                                <li><a href="#">Guías <span>(10)</span></a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Recent Posts -->
+                        <div class="sidebar-widget">
+                            <h4>Artículos Recientes</h4>
+                            <div class="recent-posts">
+                                <div class="recent-post">
+                                    <img src="assets/Mouse Gamer Logitech G502 X.jpg" alt="Mouse Gaming">
+                                    <div class="recent-post-content">
+                                        <h6>Los mejores mouses para FPS</h6>
+                                        <span class="date">12 de Mayo, 2024</span>
+                                    </div>
+                                </div>
+                                <div class="recent-post">
+                                    <img src="assets/Teclado Logitech G PRO X TKL LIGHTSPEED Black-5.jpg" alt="Teclado Gaming">
+                                    <div class="recent-post-content">
+                                        <h6>Guía de switches mecánicos</h6>
+                                        <span class="date">10 de Mayo, 2024</span>
+                                    </div>
+                                </div>
+                                <div class="recent-post">
+                                    <img src="assets/MICROFONO HYPERX QUADCAST S RGB.jpg" alt="Micrófono">
+                                    <div class="recent-post-content">
+                                        <h6>Micrófonos para streaming</h6>
+                                        <span class="date">5 de Mayo, 2024</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Newsletter -->
+                        <div class="sidebar-widget newsletter">
+                            <h4>Newsletter</h4>
+                            <p>Suscríbete para recibir las últimas noticias y ofertas</p>
+                            <form class="newsletter-form">
+                                <input type="email" placeholder="Tu email" class="form-control">
+                                <button type="submit" class="btn btn-primary">Suscribirse</button>
+                            </form>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="social-media">
                     <p>Síguenos en nuestras redes sociales:</p>
-                    <a href="https://facebook.com" target="_blank"><img src="assets/facebookicon.webp"
-                            alt="Facebook" /></a>
-                    <a href="https://twitter.com" target="_blank"><img src="assets/twittericon.png" alt="Twitter" /></a>
-                    <a href="https://instagram.com" target="_blank"><img src="assets/instagramicon.png"
-                            alt="Instagram" /></a>
-                    <a href="https://linkedin.com" target="_blank"><img src="assets/linkedinicon.png"
-                            alt="LinkedIn" /></a>
+                    <a href="https://facebook.com" target="_blank" title="Facebook">
+                        <img src="assets/facebookicon.webp" alt="Facebook" />
+                    </a>
+                    <a href="https://twitter.com" target="_blank" title="Twitter">
+                        <img src="assets/twittericon.png" alt="Twitter" />
+                    </a>
+                    <a href="https://instagram.com" target="_blank" title="Instagram">
+                        <img src="assets/instagramicon.png" alt="Instagram" />
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" title="LinkedIn">
+                        <img src="assets/linkedinicon.png" alt="LinkedIn" />
+                    </a>
                 </div>
                 <div class="footer-links">
+                    <h5>Enlaces Útiles</h5>
                     <a href="sobre_nosotros.html">Acerca de Nosotros</a>
                     <a href="politica_privacidad.html">Política de Privacidad</a>
                     <a href="terminos_condiciones.html">Términos y Condiciones</a>
                 </div>
                 <div class="contact-info">
-                    <p>Contacta con nosotros:</p>
-                    <p>Email: info@bizcomputers.com.co.</p>
-                    <p>Teléfono: +123 456 7890</p>
+                    <h5>Contacto</h5>
+                    <p><i class="fas fa-envelope"></i> info@bizcomputers.com.co</p>
+                    <p><i class="fas fa-phone"></i> +57 300 123 4567</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Bogotá, Colombia</p>
                 </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BIZ COMPUTERS. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
+
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

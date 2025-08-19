@@ -1,90 +1,387 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/style.css">
-        <title>Contacto - Tienda de Computadoras</title>
-    </head>
-<body>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>BIZ COMPUTERS - Contacto</title>
+    <meta name="description" content="Contáctanos en BIZ COMPUTERS. Estamos aquí para ayudarte con cualquier consulta sobre nuestros productos gaming y servicios tecnológicos.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="contact-page">
+    <!-- Header -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
                 <a class="navbar-brand" href="index.html">
-                    <img src="assets/logoEmpresa.jpg" alt="Logo de la Empresa" style="height: 50px;">
+                    <img src="assets/logoEmpresa.jpg" alt="BIZ COMPUTERS" style="height: 60px;">
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-item nav-link" href="index.html">Inicio</a>
-                        <a class="nav-item nav-link" href="productos.html">Productos</a>
-                        <a class="nav-item nav-link" href="blog.html">Blog</a>
-                        <a class="nav-item nav-link" href="sobre_nosotros.html">Nosotros</a>
-                        <a class="nav-item nav-link" href="contacto.html">Contacto</a>
-                    </div>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="productos.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobre_nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="navbar-icons">
-                    <a class="nav-icon" href="login.html"><i class="fas fa-user"></i></a>
-                    <a class="nav-icon" href="registro.html"><i class="fas fa-user-plus"></i></a>
-                    <a class="nav-icon" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                    <div class="theme-toggle" onclick="toggleTheme()">
+                        <div class="toggle-slider"></div>
+                    </div>
+                    <a class="nav-icon" href="login.html" title="Iniciar Sesión">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <a class="nav-icon" href="registro.html" title="Registrarse">
+                        <i class="fas fa-user-plus"></i>
+                    </a>
+                    <a class="nav-icon" href="cart.html" title="Carrito de Compras">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
                 </div>
             </div>
         </nav>
     </header>
 
-    <div class="container mt-5">
-        <h2>Contacto</h2>
-        <div class="contact-info">
-            <p>Dirección: Calle Falsa 123, Ciudad X, País Y</p>
-            <p>Correo electrónico: info@tiendadecomputadoras.com</p>
-            <p>Teléfono: +123 456 7890</p>
+    <!-- Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="contact-title">Contáctanos</h1>
+                    <p class="contact-subtitle">Estamos aquí para ayudarte con cualquier consulta sobre nuestros productos gaming</p>
+                    <p class="contact-description">
+                        Nuestro equipo de expertos está disponible para brindarte la mejor asesoría 
+                        en tecnología gaming y resolver cualquier duda que tengas.
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-stats">
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h4>24/7 Soporte</h4>
+                                <p>Disponibles siempre para ti</p>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h4>Respuesta Inmediata</h4>
+                                <p>En menos de 2 horas</p>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h4>Soporte Técnico</h4>
+                                <p>Especialistas en gaming</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <form id="contact-form">
-            <div class="form-group">
-                <label for="name">Nombre:</label>
-                <input type="text" id="name" class="form-control" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Correo Electrónico:</label>
-                <input type="email" id="email" class="form-control" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Mensaje:</label>
-                <textarea id="message" class="form-control" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
-        </form>
-    </div>
+    </section>
 
+    <!-- Información de Contacto -->
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Nuestra Ubicación</h3>
+                        <p><strong>Dirección:</strong><br>
+                        Calle 123 # 45-67<br>
+                        Centro Comercial Plaza Central<br>
+                        Bogotá, Colombia</p>
+                        <a href="https://maps.google.com" target="_blank" class="btn btn-outline-primary">
+                            <i class="fas fa-directions"></i> Ver en Google Maps
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Teléfonos</h3>
+                        <p><strong>Ventas:</strong><br>
+                        <a href="tel:+5712345678">+57 1 234 5678</a></p>
+                        <p><strong>Soporte Técnico:</strong><br>
+                        <a href="tel:+5712345679">+57 1 234 5679</a></p>
+                        <p><strong>WhatsApp:</strong><br>
+                        <a href="https://wa.me/573001234567">+57 300 123 4567</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Correos Electrónicos</h3>
+                        <p><strong>Información General:</strong><br>
+                        <a href="mailto:info@bizcomputers.com.co">info@bizcomputers.com.co</a></p>
+                        <p><strong>Soporte Técnico:</strong><br>
+                        <a href="mailto:soporte@bizcomputers.com.co">soporte@bizcomputers.com.co</a></p>
+                        <p><strong>Ventas:</strong><br>
+                        <a href="mailto:ventas@bizcomputers.com.co">ventas@bizcomputers.com.co</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Horarios de Atención -->
+    <section class="contact-hours">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="hours-card">
+                        <h3><i class="fas fa-clock"></i> Horarios de Atención</h3>
+                        <div class="hours-list">
+                            <div class="hours-item">
+                                <span class="day">Lunes - Viernes:</span>
+                                <span class="time">8:00 AM - 8:00 PM</span>
+                            </div>
+                            <div class="hours-item">
+                                <span class="day">Sábados:</span>
+                                <span class="time">9:00 AM - 6:00 PM</span>
+                            </div>
+                            <div class="hours-item">
+                                <span class="day">Domingos:</span>
+                                <span class="time">10:00 AM - 4:00 PM</span>
+                            </div>
+                            <div class="hours-item special">
+                                <span class="day">Soporte Online:</span>
+                                <span class="time">24/7</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="social-card">
+                        <h3><i class="fas fa-share-alt"></i> Síguenos en Redes Sociales</h3>
+                        <p>Mantente actualizado con las últimas novedades en tecnología gaming</p>
+                        <div class="social-links">
+                            <a href="https://facebook.com" target="_blank" class="social-link facebook">
+                                <i class="fab fa-facebook-f"></i>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="https://instagram.com" target="_blank" class="social-link instagram">
+                                <i class="fab fa-instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                            <a href="https://twitter.com" target="_blank" class="social-link twitter">
+                                <i class="fab fa-twitter"></i>
+                                <span>Twitter</span>
+                            </a>
+                            <a href="https://youtube.com" target="_blank" class="social-link youtube">
+                                <i class="fab fa-youtube"></i>
+                                <span>YouTube</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de Contacto -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="form-card">
+                        <h2><i class="fas fa-paper-plane"></i> Envíanos un Mensaje</h2>
+                        <p>Completa el formulario y nos pondremos en contacto contigo lo antes posible.</p>
+                        
+                        <form id="contact-form" class="contact-form">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="name">
+                                            <i class="fas fa-user"></i> Nombre Completo *
+                                        </label>
+                                        <input type="text" id="name" name="name" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="email">
+                                            <i class="fas fa-envelope"></i> Correo Electrónico *
+                                        </label>
+                                        <input type="email" id="email" name="email" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="phone">
+                                            <i class="fas fa-phone"></i> Teléfono
+                                        </label>
+                                        <input type="tel" id="phone" name="phone" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="subject">
+                                            <i class="fas fa-tag"></i> Asunto *
+                                        </label>
+                                        <select id="subject" name="subject" class="form-control" required>
+                                            <option value="">Selecciona un asunto</option>
+                                            <option value="ventas">Consulta de Ventas</option>
+                                            <option value="soporte">Soporte Técnico</option>
+                                            <option value="producto">Información de Producto</option>
+                                            <option value="garantia">Garantía</option>
+                                            <option value="devolucion">Devolución</option>
+                                            <option value="otro">Otro</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">
+                                    <i class="fas fa-comment"></i> Mensaje *
+                                </label>
+                                <textarea id="message" name="message" class="form-control" rows="6" 
+                                    placeholder="Describe tu consulta o solicitud..." required></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="newsletter" name="newsletter">
+                                    <label class="custom-control-label" for="newsletter">
+                                        Suscribirme al newsletter para recibir ofertas especiales
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="sidebar-card">
+                        <h3><i class="fas fa-info-circle"></i> Información Útil</h3>
+                        
+                        <div class="info-item">
+                            <h4><i class="fas fa-shipping-fast"></i> Envíos</h4>
+                            <p>Envío gratuito en compras superiores a $500,000 COP</p>
+                        </div>
+                        
+                        <div class="info-item">
+                            <h4><i class="fas fa-shield-alt"></i> Garantía</h4>
+                            <p>Todos nuestros productos incluyen garantía de fábrica</p>
+                        </div>
+                        
+                        <div class="info-item">
+                            <h4><i class="fas fa-undo"></i> Devoluciones</h4>
+                            <p>30 días para cambios y devoluciones sin problemas</p>
+                        </div>
+                        
+                        <div class="info-item">
+                            <h4><i class="fas fa-credit-card"></i> Pagos Seguros</h4>
+                            <p>Aceptamos todas las tarjetas y métodos de pago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mapa -->
+    <section class="contact-map">
+        <div class="container">
+            <h2 class="text-center mb-4"><i class="fas fa-map"></i> Nuestra Ubicación</h2>
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>Centro Comercial Plaza Central</h3>
+                    <p>Calle 123 # 45-67, Bogotá, Colombia</p>
+                    <a href="https://maps.google.com" target="_blank" class="btn btn-primary">
+                        <i class="fas fa-directions"></i> Ver en Google Maps
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="social-media">
-                    <p>Síguenos en nuestras redes sociales:</p>
-                    <a href="https://facebook.com" target="_blank"><img src="assets/facebookicon.webp" alt="Facebook" /></a>
-                    <a href="https://twitter.com" target="_blank"><img src="assets/twittericon.png" alt="Twitter" /></a>
-                    <a href="https://instagram.com" target="_blank"><img src="assets/instagramicon.png" alt="Instagram" /></a>
-                    <a href="https://linkedin.com" target="_blank"><img src="assets/linkedinicon.png" alt="LinkedIn" /></a>
+                    <h5>Síguenos en nuestras redes sociales:</h5>
+                    <a href="https://facebook.com" target="_blank" title="Facebook">
+                        <img src="assets/facebookicon.webp" alt="Facebook" />
+                    </a>
+                    <a href="https://twitter.com" target="_blank" title="Twitter">
+                        <img src="assets/twittericon.png" alt="Twitter" />
+                    </a>
+                    <a href="https://instagram.com" target="_blank" title="Instagram">
+                        <img src="assets/instagramicon.png" alt="Instagram" />
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" title="LinkedIn">
+                        <img src="assets/linkedinicon.png" alt="LinkedIn" />
+                    </a>
                 </div>
                 <div class="footer-links">
+                    <h5>Enlaces Útiles</h5>
                     <a href="sobre_nosotros.html">Acerca de Nosotros</a>
                     <a href="politica_privacidad.html">Política de Privacidad</a>
                     <a href="terminos_condiciones.html">Términos y Condiciones</a>
                 </div>
                 <div class="contact-info">
-                    <p>Contacta con nosotros:</p>
-                    <p>Email: info@bizcomputers.com.co.</p>
-                    <p>Teléfono: +123 456 7890</p>>
+                    <h5>Contacta con nosotros:</h5>
+                    <p><i class="fas fa-envelope"></i> info@bizcomputers.com.co</p>
+                    <p><i class="fas fa-phone"></i> +57 1 234 5678</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Bogotá, Colombia</p>
                 </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BIZ COMPUTERS. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
+
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

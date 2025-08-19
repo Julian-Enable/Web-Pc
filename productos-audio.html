@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>BIZ COMPUTERS - Productos de Audio Gaming</title>
+    <meta name="description" content="Productos de audio gaming de alta calidad. Headsets y micrófonos para gamers profesionales.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="productos-audio-page">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/logoEmpresa.jpg" alt="Logo de la Empresa" style="height: 50px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link" href="index.html">Inicio</a>
+                        <a class="nav-item nav-link" href="productos.html">Productos</a>
+                        <a class="nav-item nav-link active" href="productos-audio.html">Audio</a>
+                        <a class="nav-item nav-link" href="blog.html">Blog</a>
+                        <a class="nav-item nav-link" href="sobre_nosotros.html">Nosotros</a>
+                        <a class="nav-item nav-link" href="contacto.html">Contacto</a>
+                    </div>
+                </div>
+                <div class="navbar-icons">
+                    <div class="theme-toggle" id="themeToggle">
+                        <div class="toggle-slider"></div>
+                    </div>
+                    <a class="nav-icon" href="login.html"><i class="fas fa-user"></i></a>
+                    <a class="nav-icon" href="registro.html"><i class="fas fa-user-plus"></i></a>
+                    <a class="nav-icon" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="productos" class="container mt-5" style="margin-top: 120px !important;">
+        <h2 class="text-center mb-4">Productos de Audio Gaming</h2>
+        <p class="subtitle">Descubre nuestra selección premium de audio para gamers</p>
+        
+        <!-- Filtros de categoría -->
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-outline-primary active" onclick="filtrarPorCategoria('audio')">Todos</button>
+                    <button type="button" class="btn btn-outline-primary" onclick="filtrarPorCategoria('headsets')">Headsets</button>
+                    <button type="button" class="btn btn-outline-primary" onclick="filtrarPorCategoria('microfonos')">Micrófonos</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" id="productos-container">
+            <!-- Los productos de audio se cargarán automáticamente desde products.js -->
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-media">
+                    <p>Síguenos en nuestras redes sociales:</p>
+                    <a href="https://facebook.com" target="_blank"><img src="assets/facebookicon.webp"
+                            alt="Facebook" /></a>
+                    <a href="https://twitter.com" target="_blank"><img src="assets/twittericon.png" alt="Twitter" /></a>
+                    <a href="https://instagram.com" target="_blank"><img src="assets/instagramicon.png"
+                            alt="Instagram" /></a>
+                    <a href="https://linkedin.com" target="_blank"><img src="assets/linkedinicon.png"
+                            alt="LinkedIn" /></a>
+                </div>
+                <div class="footer-links">
+                    <a href="sobre_nosotros.html">Acerca de Nosotros</a>
+                    <a href="politica_privacidad.html">Política de Privacidad</a>
+                    <a href="terminos_condiciones.html">Términos y Condiciones</a>
+                </div>
+                <div class="contact-info">
+                    <p>Contacta con nosotros:</p>
+                    <p>Email: info@bizcomputers.com.co.</p>
+                    <p>Teléfono: +123 456 7890</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Script específico para esta página
+        document.addEventListener('DOMContentLoaded', function() {
+            // Cargar solo productos de audio
+            renderizarTodosLosProductos('productos-container', 'audio');
+        });
+
+        // Función para filtrar por categoría
+        function filtrarPorCategoria(categoria) {
+            // Actualizar botones activos
+            document.querySelectorAll('.btn-group .btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            // Renderizar productos filtrados
+            if (categoria === 'audio') {
+                renderizarTodosLosProductos('productos-container', 'audio');
+            } else if (categoria === 'headsets') {
+                const productosFiltrados = PRODUCTOS.filter(p => 
+                    p.categoria === 'audio' && p.nombre.toLowerCase().includes('diadema')
+                );
+                renderizarProductosFiltrados(productosFiltrados);
+            } else if (categoria === 'microfonos') {
+                const productosFiltrados = PRODUCTOS.filter(p => 
+                    p.categoria === 'audio' && p.nombre.toLowerCase().includes('microfono')
+                );
+                renderizarProductosFiltrados(productosFiltrados);
+            }
+        }
+
+        // Función para renderizar productos filtrados
+        function renderizarProductosFiltrados(productos) {
+            const container = document.getElementById('productos-container');
+            if (!container) return;
+
+            container.innerHTML = '';
+            productos.forEach(producto => {
+                renderizarProducto(producto, 'productos-container');
+            });
+        }
+    </script>
+</body>
+
+</html>

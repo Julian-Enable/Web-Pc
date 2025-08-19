@@ -2,16 +2,19 @@
 <html lang="es">
 
 <head>
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Productos - Tienda de Computadoras</title>
+    <title>BIZ COMPUTERS - Productos Gaming</title>
+    <meta name="description" content="Tienda especializada en productos gaming de alta calidad. Encuentra los mejores componentes para tu setup gaming.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="productos-page">
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
@@ -32,6 +35,9 @@
                     </div>
                 </div>
                 <div class="navbar-icons">
+                    <div class="theme-toggle" id="themeToggle">
+                        <div class="toggle-slider"></div>
+                    </div>
                     <a class="nav-icon" href="login.html"><i class="fas fa-user"></i></a>
                     <a class="nav-icon" href="registro.html"><i class="fas fa-user-plus"></i></a>
                     <a class="nav-icon" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
@@ -39,104 +45,11 @@
             </div>
         </nav>
     </header>
-    <section id="productos" class="container mt-5">
+    <section id="productos" class="container mt-5" style="margin-top: 120px !important;">
         <h2 class="text-center mb-4">Nuestros Productos</h2>
-        <div class="row">
-            <!-- Aquí comienzan los productos -->
-            <div class="col-md-4 mb-4" data-product-id="1">
-                <div class="card">
-                    <img src="assets/Diadema-Gamer-HyperX-Cloud-Stinger-2-Core-DTS.jpg" class="card-img-top"
-                        alt="Producto 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Diadema Gamer HyperX Cloud Stinger 2 Core DTS</h5>
-                        <p class="card-text">Cascos gamer de alta calidad</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="price">$250.00</span>
-                            <button class="btn btn-primary">Ver más</button>
-                            <button class="btn btn-success add-to-cart">Añadir</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Copia este bloque para los otros productos, cambiando los datos del producto y el ID -->
-            <div class="col-md-4 mb-4" data-product-id="2">
-                <div class="card">
-                    <img src="assets/MICROFONO HYPERX QUADCAST S RGB.jpg" class="card-img-top" alt="Producto 2">
-                    <div class="card-body">
-                        <h5 class="card-title">MICROFONO HYPERX QUADCAST S RGB</h5>
-                        <p class="card-text">Microfono gamer de alta calidad</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="price">$120.00</span>
-                            <button class="btn btn-primary">Ver más</button>
-                            <button class="btn btn-success add-to-cart">Añadir</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 mb-4" data-product-id="3">
-                <div class="card">
-                    <img src="assets/Mouse Gamer Logitech G502 X.jpg" class="card-img-top" alt="Producto 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Mouse Gamer Logitech G502 X</h5>
-                        <p class="card-text">Mouse gamer de alta calidad</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="price">$100.00</span>
-                            <button class="btn btn-primary">Ver más</button>
-                            <button class="btn btn-success add-to-cart">Añadir</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 mb-4" data-product-id="4">
-                <div class="card">
-                    <img src="assets/Tarjeta INNO3D GEFORCE RTX 4080 SUPER ICHILL X3 16G RGB.jpg" class="card-img-top"
-                        alt="Producto 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Tarjeta INNO3D GEFORCE RTX 4080 SUPER X3 16G</h5>
-                        <p class="card-text">Tarjeta grafica gamer</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="price">$1200.00</span>
-                            <button class="btn btn-primary">Ver más</button>
-                            <button class="btn btn-success add-to-cart">Añadir</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 mb-4" data-product-id="5">
-                <div class="card">
-                    <img src="assets/Tarjeta-XFX-SPEEDSTER-SWFT-210-AMD-Radeon-RX-7600-XT.jpg" class="card-img-top"
-                        alt="Producto 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Tarjeta SPEEDSTER 210 AMD Radeon RX 7600 XT</h5>
-                        <p class="card-text">Tarjeta grafica gamer</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="price">$1000.00</span>
-                            <button class="btn btn-primary">Ver más</button>
-                            <button class="btn btn-success add-to-cart">Añadir</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 mb-4" data-product-id="6">
-                <div class="card">
-                    <img src="assets/Teclado Logitech G PRO X TKL LIGHTSPEED Black-5.jpg" class="card-img-top"
-                        alt="Producto 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Teclado Logitech G PRO LIGHTSPEED Black-5</h5>
-                        <p class="card-text">Teclado gamer de alta calidad</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="price">$250.00</span>
-                            <button class="btn btn-primary">Ver más</button>
-                            <button class="btn btn-success add-to-cart">Añadiro</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <p class="subtitle">Descubre nuestra selección premium de productos gaming</p>
+        <div class="row" id="productos-container">
+            <!-- Los productos se cargarán automáticamente desde products.js -->
         </div>
     </section>
 
@@ -166,6 +79,7 @@
             </div>
         </div>
     </footer>
+    <script src="js/products.js"></script>
     <script src="js/main.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
